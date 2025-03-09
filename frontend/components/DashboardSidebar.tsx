@@ -8,7 +8,6 @@ import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import { CreateTableDialog } from "./CreateTableDialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Card } from "./ui/card";
-import { useState } from "react";
 
 export function DashboardSidebar() {
   const { logout, user } = useAuth();
