@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "nodemon ./dist",
     "start": "ts-node -r tsconfig-paths/register src/index.ts",
-    "build": "tsc"
+    "build": "npm install && tsc -b"
   },
   "keywords": [],
   "author": "",
