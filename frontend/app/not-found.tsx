@@ -7,7 +7,7 @@ export default function NotFound() {
       <h1 className="text-6xl font-bold text-brand-primary">404</h1>
       <h2 className="mt-4 text-2xl font-semibold">Page Not Found</h2>
       <p className="mt-2 text-muted-foreground">
-        We couldn't find the page you were looking for.
+        We could not find the page you were looking for.
       </p>
       <Button asChild className="mt-8">
         <Link href="/">Go Back Home</Link>

@@ -97,7 +97,7 @@ export default function Login() {
             </Button>
 
             <div className="text-center text-sm mt-3">
-              Don't have an account?{" "}
+              Do not have an account?{" "}
               <Link 
                 href="/signup" 
                 className="text-brand-primary hover:underline">

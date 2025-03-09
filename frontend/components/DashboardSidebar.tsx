@@ -4,7 +4,7 @@ import { useAuth } from "@/contexts/AuthContext";
 import { useTable } from "@/contexts/TableContext";
 import { Button } from "@/components/ui/button";
 import { PlusCircle, LogOut, Table as TableIcon } from "lucide-react";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import { CreateTableDialog } from "./CreateTableDialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Card } from "./ui/card";
@@ -13,7 +13,7 @@ import { useState } from "react";
 export function DashboardSidebar() {
   const { logout, user } = useAuth();
   const { tables, loadTable, currentTable } = useTable();
-  const [ isNavOpen, setIsNavOpen ] = useState(false)
+  // const [ isNavOpen, setIsNavOpen ] = useState(false)
   return (
     <Card >
     <div className="h-screen w-64 flex flex-col border-r bg-(--grad-start-soft)/70">

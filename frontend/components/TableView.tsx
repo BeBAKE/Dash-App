@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useTable } from "@/contexts/TableContext";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Input } from "@/components/ui/input";
@@ -78,7 +78,7 @@ export function TableView() {
               <DialogHeader>
                 <DialogTitle>Create New Table</DialogTitle>
                 <DialogDescription>
-                  You'll be redirected to the create table form.
+                  You will be redirected to the create table form.
                 </DialogDescription>
               </DialogHeader>
             </DialogContent>

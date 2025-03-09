@@ -4,7 +4,6 @@ import { useAuth } from "@/contexts/AuthContext";
 import { TableProvider } from "@/contexts/TableContext";
 import { DashboardSidebar } from "@/components/DashboardSidebar";
 import { redirect } from "next/navigation";
-import { Card } from "@/components/ui/card";
 
 export default function DashboardLayout({
   children,
@@ -29,8 +28,6 @@ export default function DashboardLayout({
     <TableProvider>
       <div className="flex h-screen w-full">
           <DashboardSidebar />
-        {/* <Card>
-        </Card> */}
         <main className="flex-1 flex flex-col overflow-hidden">
           {children}
         </main>
