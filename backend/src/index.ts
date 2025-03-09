@@ -54,14 +54,14 @@ const port: number | string = process.env.port || 5500
 
 app.use(express.json())
 app.use(cors({
-  origin: (origin, callback) => {
-    if (!origin || origin.includes("dash-app-one.vercel.app")) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-  // origin : "*",
+  // origin: (origin, callback) => {
+  //   if (!origin || origin.includes("dash-app-one.vercel.app")) {
+  //     callback(null, true);
+  //   } else {
+  //     callback(new Error("Not allowed by CORS"));
+  //   }
+  // },
+  origin : "*",
   methods : "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true 
 }));
@@ -74,10 +74,10 @@ app.get('/api/v1/health', async(req:express.Request,res:express.Response)=>{
 
 app.listen(port, async() => {
   try {
-    await connectDB(process.env.MONGO_URI!)
+    await connectDB(process.env.MONGO_URI as string)
     console.log(`server started on port : ${port}`)
   } catch (error) {
-    console.log("error connecting database")
+    console.log("error connecting database",error)
     await disconnect()
   }
 })
