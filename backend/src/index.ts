@@ -55,7 +55,7 @@ const port: number | string = process.env.port || 5500
 app.use(express.json())
 app.use(cors({
   origin: (origin, callback) => {
-    if (!origin || origin.endsWith("projectlive.me")) {
+    if (!origin || origin.endsWith("dash-app-one.vercel.app")) {
       callback(null, true);
     } else {
       callback(new Error("Not allowed by CORS"));
